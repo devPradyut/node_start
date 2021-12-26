@@ -11,13 +11,13 @@ app.use((req, res, next) => {
     console.log('Time: ', Date.now());
 
     next();
-  });
+});
   
 app.use('/request-type', (req, res, next) => {
     console.log('Request type: ', req.method);
     next();
-  }); 
+}); 
 
 app.use('/api', base_router_module);
 
-  app.listen(3000, () => console.log('Example app is listening on port 3000.'));
+app.listen(3000, () => console.log('Example app is listening on port 3000.'));
